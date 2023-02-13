@@ -1,0 +1,23 @@
+#roadmapContainer {
+    position: absolute;
+    top: 20px;
+    left: 100px;
+}
+
+.roadItem {
+    margin: 5px 0;
+    background: #fff3;
+    padding: 8px;
+    border-radius: 8px;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.roadItem:before {
+    content: '-•> '
+}
+
+.roadItem:hover {
+    background: #fff5;
+    box-shadow: -5px 0 #00bd5b;
+}

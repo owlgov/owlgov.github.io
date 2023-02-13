@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Owl </title>
+    <link rel="shortcut icon" href="./src/img/1024.png" type="image/x-icon">
+    <link rel="stylesheet" href="./src/css/main.css">
+    <link rel="stylesheet" href="./src/css/font.css">
+    <link rel="stylesheet" href="./src/css/themes/dark.css" id="themeLink">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+    <script src="./src/js/index.js" defer></script>
+
+</head>
+
+<body>
+    <div id="navBar">
+        <img src="/owl/src/img/custom/img_0.png" id="miniProfilePic" onclick="toggleWindow(1)">
+        <div id="hz-Spr"> </div>
+        <div class="navIcons">
+            <div class="navItem">
+                <span class="customizeIcon navIcon material-icons" onclick="toggleWindow(2)"> brush </span>
+            </div>
+
+            <div class="navItem">
+                <span class="schoolIcon navIcon material-icons"> school </span>
+            </div>
+
+            <div class="navItem">
+                <span class="mailIcon navIcon material-icons"> mail </span>
+            </div>
+
+            <div class="navItem">
+                <span class="friendsIcon navIcon material-icons" onclick="toggleWindow(5)"> group </span>
+            </div>
+
+            <div class="navItem">
+                <span class="accountIcon navIcon material-icons"> alternate_email </span>
+            </div>
+
+            <div class="navItem">
+                <span class="settingsIcon navIcon material-icons" onclick="toggleWindow(7)"> settings </span>
+            </div>
+        </div>
+    </div>
+
+    <div id="parallaxContainer">
+        <div class="parallax-title"> </div>
+        <div class="parallax-subcontent"> What do you want to do today? </div>
+    </div>
+
+
+    <div id="infoContainer">
+        <span class="infoIcon material-icons-outlined" onclick="toggleWindow(8)"> info </span>
+    </div>
+
+    <!-- Login -->
+    <div id="loginBar" class="bar">
+        <!--        <div class="bar-header" class="bar"> Account Login </div>
+        <div class="inputFields">
+            <input type="text" id="userName" placeholder="Username" class="userInput">
+            <div class="passwordContainer">
+                <span id="seePassword" class="material-icons-outlined" onclick="toggleVis()"> visibility_off </span>
+                <input type="password" id="userPass" placeholder="Password" class="userInput">
+            </div>
+        </div>
+        <div id="submitButton" onclick="toggleWindow(1)"> Submit </div>
+    -->
+        <div class="bar-header"> Account </div>
+        <div class="userTop">
+            <img src="./src/img/custom/img_0.png" class="profileImage online">
+            <div class="userName">
+                <div class="userClan" style="color: #00ddff"> [DEV] </div> Aston
+            </div>
+            <div class="title" style="color: #00ddff"> Developer </div>
+
+            <div class="statsContainer">
+                <div class="statItem">
+                    <div class="statName"> Hours on Record</div>
+                    <div class="statVal stat-100"> 3.69 </div>
+                </div>
+                <div class="statItem">
+                    <div class="statName"> Friends</div>
+                    <div class="statVal stat-100"> 1 </div>
+                </div>
+                <div class="statItem">
+                    <div class="statName"> Client</div>
+                    <div class="statVal stat-100"> Owl DEV </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Customize -->
+    <div id="customizeBar" class="bar">
+        <div class="bar-header" class="bar"> Themes </div>
+        <div class="themeList">
+            <div class="themeItem default" onclick="toggleWindow(2); changeTheme(1)">
+                <div class="theme-name">
+                    <span class="theme-lock material-icons"> </span> Default
+                </div>
+
+                <div class="unlock-method">Originality at its finest. </div>
+            </div>
+
+            <div class="themeItem light" onclick="toggleWindow(2); changeTheme(2)">
+                <div class="theme-name">
+                    <span class="theme-lock material-icons"> </span> Light
+                </div>
+
+                <div class="unlock-method">Originality at its finest, but inverted. </div>
+            </div>
+
+            <div class="themeItem shadow" onclick="toggleWindow(2); changeTheme(3)">
+                <div class="theme-name">
+                    <span class="theme-lock material-icons" style="margin-right: 5px;"> </span> Shadow Spirit
+                </div>
+
+                <div class="unlock-method"> Unlocked in Kombat League </div>
+            </div>
+
+            <div class="themeItem shirai" onclick="toggleWindow(2); changeTheme(4)">
+                <div class="theme-name">
+                    <span class="theme-lock material-icons" style="margin-right: 5px;"> </span> Shirai Ryu Heart
+                </div>
+
+                <div class="unlock-method"> Unlocked in Kombat League </div>
+            </div>
+
+            <div class="themeItem yann" onclick="toggleWindow(2); changeTheme(5)">
+                <div class="theme-name">
+                    <span class="theme-lock material-icons" style="margin-right: 5px;"> </span> Yannmatrix
+                </div>
+
+                <div class="unlock-method"> ???????? </div>
+            </div>
+
+            <div class="themeItem dev" onclick="toggleWindow(2); changeTheme(6)">
+                <div class="theme-name">
+                    <span class="theme-lock material-icons" style="margin-right: 5px;"> </span> Developer's
+                </div>
+
+                <div class="unlock-method"> ???????? </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+
+    <!-- Friends -->
+    <div id="friendsBar" class="bar">
+        <div class="bar-header" class="bar"> Friends </div>
+        <div class="friendsList">
+            <div class="friend">
+                <img src="./src/img/custom/img_1.png" class="miniFriend offline">
+                <div class="friend-info">
+                    <div class="friend-name">
+                        <div class="friendClan"> [五はん] </div>
+                        <div class="friend-nameInner"> enzenra </div>
+                    </div>
+                    <div class="friend-status">
+                        Offline
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="addFriends"> Add Friends <span class="material-icons" style="display: flex;"> add
+            </span></button>
+    </div>
+    <!-- Info -->
+    <div id="infoBack">
+        <div class="infoModal">
+            <div class="infoModal-top">
+                <div class="infoModal-title"> Site Info </div>
+                <button class="infoModal-close" onclick="toggleWindow(8)">
+                    <span class="material-icons"> close </span>
+                </button>
+            </div>
+            <div class=" infoModal-content">
+                <div class="message">⚠️ This site is still in Alpha Testing</div>
+                <div class="message">© Copyright Aston Black, September 2022 CC BY-ND 3.0</div>
+                <div class="message">
+                    <span class="material-icons" style="margin-right: 8px;"> favorite </span> Made with love
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Settings -->
+    <div id="settingsHolder">
+        <div id="closeSettings" onclick="toggleWindow(7)">
+            <span class="closeIcon material-icons"> close </span>
+        </div>
+        <div class="settingsContainer">
+            <div class="sectionNav">
+                <div class="sectionItem active"> General </div>
+                <div class="sectionItem"> User </div>
+                <div class="sectionItem"> Customization </div>
+                <div class="sectionItem"> Friends </div>
+            </div>
+            <div class="settings-flex">
+                <div class="setting-title"> Notifications </div>
+                <div class="setting-switch">
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="settingsDrop">
+                <div class="settings-flex">
+                    <div class="setting-title"> Google Classroom </div>
+                    <div class="setting-switch">
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                </div>
+                <div class="settings-flex">
+                    <div class="setting-title"> Gmail </div>
+                    <div class="setting-switch">
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                </div>
+                <div class="settings-flex">
+                    <div class="setting-title"> Site Updates </div>
+                    <div class="setting-switch">
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    </div>
+
+    <div id="browserWindow">
+        <div class="topContainer">
+            <span class="leaveButton material-icons"> close </span>
+            <div id="inputContainer">
+                <input type="text" class="linkInput">
+            </div>
+            <span class="refereshButton material-icons"> refresh </span>
+        </div>
+        <div class="topContainerTabs">
+            <div class="tabItem">
+                <div class="tabIcon">
+                    <span class="material-icons"> school </span>
+                </div>
+                <div class="tabName"> Classroom </div>
+            </div>
+
+            <div class="tabItem">
+                <div class="tabIcon">
+                    <span class="material-icons"> home </span>
+                </div>
+                <div class="tabName"> New Tab </div>
+            </div>
+        </div>
+        <div class="display"> </div>
+    </div>
+
+</body>
+
+</html>

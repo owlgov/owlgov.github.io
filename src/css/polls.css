@@ -1,0 +1,38 @@
+.pollItem {
+    background: #ffffff20;
+    padding: 12px;
+    width: 50%;
+}
+
+.pollLabel {
+    display: flex;
+    margin-bottom: 12px;
+}
+
+.barPercentage {
+    margin-right: 12px;
+}
+
+.pollOption-bar {
+    background: var(--accent);
+    width: 100%;
+    height: 10px;
+    border-radius: 8px;
+}
+
+.pollOption {
+    margin-top: 8px;
+    padding-top: 12px;
+    transition: .3s;
+}
+
+.poll-title {
+    font-size: 32px;
+    border-bottom: 2px solid;
+    padding-bottom: 12px;
+}
+
+.pollOption.selected {
+    border-left: 2px solid var(--accent);
+    padding-left: 16px;
+}

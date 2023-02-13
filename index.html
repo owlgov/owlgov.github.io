@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Home | Owl Web </title>
+    <link rel="shortcut icon" href="/src/img/owl.png" type="image/x-icon">
+    <link rel="stylesheet" href="/src/css/main.css">
+
+    <link rel="stylesheet" href="/src/css/font.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+    <script src="/src/js/index.js" defer></script>
+    <script src="/src/data/data.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js" integrity="sha512-ElRFoEQdI5Ht6kZvyzXhYG9NqjtkmlkfYk0wr6wHxU9JEHakS7UJZNeml5ALk+8IKlU6jDgMabC3vkumRokgJA==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
+    <script src="/src/data/index.sql" defer></script>
+</head>
+
+<body>
+    <div id="background">
+        <div class="bgParent circle">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+
+    <div id="nav-desc">
+        <div class="desc">
+            <div class="desc-title"> 0.1 - Home </div>
+            <div class="desc-text"> Main homepage for Student Government. Go Owls!</div>
+        </div>
+    </div>
+
+    <nav id="gec-nav">
+        <div class="gec-navItem" onmouseover='changeDesc(` 0.1 - Home`, "Main homepage for Student Government. Go Owls!")' onclick="toggleStuff()">
+            <div class="navItem-icon material-icons"> home </div>
+            <div class="navItem-title"> Home </div>
+        </div>
+
+        <a class="gec-navItem" onmouseover='changeDesc("0.2 - About Us", "Who we are and what we stand for.")' href="/about-us.html">
+            <div class="navItem-icon material-icons-outlined"> info </div>
+            <div class="navItem-title"> About Us </div>
+        </a>
+
+        <a class="gec-navItem" onmouseover='changeDesc("0.3 - Clubs", "About all the clubs GEC has to offer.")' href="/clubs.html">
+            <div class="navItem-icon material-icons"> group </div>
+            <div class="navItem-title"> Clubs </div>
+        </a>
+
+        <a class="gec-navItem" onmouseover='changeDesc("0.4 - Polls", "Exercise your right as a student to vote on the things we do!")' href="/polls.html">
+            <div class="navItem-icon material-icons"> equalizer </div>
+            <div class="navItem-title"> Polls </div>
+        </a>
+
+        <a class="gec-navItem" onmouseover='changeDesc("0.5 - Newsletter", "Reading... ugh.")' href="/newsletter.html">
+            <div class="navItem-icon material-icons-outlined"> feed </div>
+            <div class="navItem-title"> Newsletter/Events </div>
+        </a>
+
+        <div class="bottomCopyright">
+            © DecipherDev 2022, All Rights Reserved | Powered by GG Energy <span class="boltIcon material-icons">bolt
+            </span>
+        </div>
+    </nav>
+
+    <div id="navButton" onclick="toggleStuff()">
+        <span class="material-icons navIcon"> keyboard_double_arrow_right </span>
+    </div>
+
+    <div id="mainContent">
+        <div id="titleHolder">
+            <div class="title"> Student Government </div>
+            <div class="title-subtitle"> We are here solely for the purpose to help you, a student, carry out your ideas and make your school year better. </div>
+            <div class="topButtons">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSdS--whKV5xq_vfOjTf06OIwY0VDvQkXTsDlGkobERN_TH6kQ/viewform?usp=sharing" class="linkButton">
+                    <button class="formButton button"> Suggest </button>
+                </a>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfRcWm7LPc4KIYSM4lxRBVuHAGNPaobmBbZMkP26xktIlBbog/viewform?usp=sharing" class="linkButton">
+                    <button class="formButton button"> Ask/Report </button>
+                </a>
+            </div>
+        </div>
+
+
+        <div id="content-vtS"> </div>
+
+        <div id="infoContainer">
+
+            <div class="infoFlex">
+                <img src="/src/img/banner.png" class="indexImg">
+                <div class="imgDesc">
+                    <div class="imgDesc-title"> Media Committee – Youtube </div>
+                    <div class="imgDesc-body"> We've started an announcement channel on Youtube! Go check it out and be up to date with everything that goes on here!
+                    </div>
+                </div>
+            </div>
+
+            <div class="infoFlex">
+                <img src="/src/img/banner.png" class="indexImg">
+                <div class="imgDesc">
+                    <div class="imgDesc-title"> World Heritage Day </div>
+                    <div class="imgDesc-body"> We're planning something. Stay tuned. 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+</html>

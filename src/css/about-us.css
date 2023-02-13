@@ -1,0 +1,22 @@
+.about-heading {
+    font-size: 32px;
+}
+
+.about-body {
+    margin-bottom: 8px;
+    line-height: 2;
+}
+
+.memberItem {
+    background: #fff2;
+    padding: 12px;
+    margin-bottom: 8px;
+}
+
+.nameVal {
+    font-size: 32px;
+}
+
+.memberSub {
+    color: var(--accent);
+}

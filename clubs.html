@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Clubs | GEC Gov </title>
+    <link rel="shortcut icon" href="/src/img/owl.png" type="image/x-icon">
+    <link rel="stylesheet" href="/src/css/main.css">
+    <link rel="stylesheet" href="/src/css/clubs.css">
+    <link rel="stylesheet" href="/src/css/font.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+    <script src="/src/js/index.js" defer></script>
+    <script src="/src/data/data.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js" integrity="sha512-ElRFoEQdI5Ht6kZvyzXhYG9NqjtkmlkfYk0wr6wHxU9JEHakS7UJZNeml5ALk+8IKlU6jDgMabC3vkumRokgJA==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
+    <script src="/src/data/index.sql" defer></script>
+</head>
+
+<body>
+    <div id="background">
+        <div class="bgParent circle">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+
+    <div id="nav-desc">
+        <div class="desc">
+            <div class="desc-title"> 0.3 - Clubs </div>
+            <div class="desc-text"> The clubs we have to offer. </div>
+        </div>
+    </div>
+
+    <nav id="gec-nav">
+        <a class="gec-navItem" onmouseover='changeDesc(` 0.1 - Home`, "Main homepage for the GEC Student Government. Go Owls!")' href="/index.html">
+            <div class="navItem-icon material-icons"> home </div>
+            <div class="navItem-title"> Home </div>
+        </a>
+
+        <a class="gec-navItem" onmouseover='changeDesc("0.2 - About Us", "Who we are and what we stand for.")' href="/about-us.html">
+            <div class="navItem-icon material-icons-outlined"> info </div>
+            <div class="navItem-title"> About Us </div>
+        </a>
+
+        <a class="gec-navItem" onmouseover='changeDesc("0.3 - Clubs", "About all the clubs GEC has to offer.")' onclick="toggleStuff()">
+            <div class="navItem-icon material-icons"> group </div>
+            <div class="navItem-title"> Clubs </div>
+        </a>
+
+        <a class="gec-navItem" onmouseover='changeDesc("0.4 - Polls", "Exercise your right as a student to vote on the things we do!")' href="/polls.html">
+            <div class="navItem-icon material-icons"> equalizer </div>
+            <div class="navItem-title"> Polls </div>
+        </a>
+
+        <a class="gec-navItem" onmouseover='changeDesc("0.5 - Newsletter", "Reading... ugh.")' href="/newsletter.html">
+            <div class="navItem-icon material-icons-outlined"> feed </div>
+            <div class="navItem-title"> Newsletter/Events </div>
+        </a>
+
+        <div class="bottomCopyright">
+            © DecipherDev 2022, All Rights Reserved | Powered by GG Energy <span class="boltIcon material-icons">bolt
+            </span>
+        </div>
+    </nav>
+
+    <div id="navButton" onclick="toggleStuff()">
+        <span class="material-icons navIcon"> keyboard_double_arrow_right </span>
+    </div>
+
+    <div id="mainContent">
+        <div id="titleHolder">
+            <div class="title"> GEC Clubs </div>
+            <div class="title-subtitle"> Here at GEC, we offer clubs which take place on specific days throughout the week. Have a look around and see which ones you like! </div>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdS--whKV5xq_vfOjTf06OIwY0VDvQkXTsDlGkobERN_TH6kQ/viewform?usp=sharing" class="linkButton">
+                <button class="formButton button"> Suggest </button>
+            </a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfRcWm7LPc4KIYSM4lxRBVuHAGNPaobmBbZMkP26xktIlBbog/viewform?usp=sharing" class="linkButton">
+                <button class="formButton button"> Ask/Report </button>
+            </a>
+        </div>
+
+
+        <div id="content-vtS"> </div>
+
+        <div id="infoContainer">
+            <div class="clubItem">
+                <div class="clubFlex-Left">
+                    <div class="clubName">
+                        <span class="clubIcon material-icons-outlined"> sports_esports </span>
+                        <div class="clubVal"> Esports (Inactive) </div>
+                    </div>
+                    <div class="dates"> Mondays/Thursdays - 3:10 // TBA </div>
+                    <div class="clubDescription"> Travel over to the Riverfront building to the home of the UMFlint Esports! The head of ITS, Jason Gooding, has been so kind as to let us use their gaming room. Check out more
+                        <a href="https://gec-esports.github.io/" class="formLink" style="color: cyan"> here! </a>
+                    </div>
+                </div>
+                <div class="clubFlex-Right">
+                    <img src="/src/img/00.png" class="bannerImg">
+                </div>
+            </div>
+
+            <div class="clubItem">
+                <div class="clubFlex-Left">
+                    <div class="clubName">
+                        <span class="clubIcon material-icons-outlined"> sports_soccer </span>
+                        <div class="clubVal"> Soccer </div>
+                    </div>
+                    <div class="dates"> Mondays - 3:10 // Mr. Myers </div>
+                    <div class="clubDescription"> Come to the Rec Center and play soccer with us! Learn basic and advanced skills for both beginners and advanced players alike. </div>
+                </div>
+                <div class="clubFlex-Right">
+                    <img src="/src/img/00.png" class="bannerImg">
+                </div>
+            </div>
+
+            <div class="clubItem">
+                <div class="clubFlex-Left">
+                    <div class="clubName">
+                        <span class="clubIcon material-icons-outlined"> flash_on </span>
+                        <div class="clubVal"> Robotics (Team Tesla 4999) </div>
+                    </div>
+                    <div class="dates"> Tuesdays/Fridays // Mrs. Rau </div>
+                    <div class="clubDescription"> robits </div>
+                </div>
+                <div class="clubFlex-Right">
+                    <img src="/src/img/00.png" class="bannerImg">
+                </div>
+            </div>
+
+            <div class="clubItem">
+                <div class="clubFlex-Left">
+                    <div class="clubName">
+                        <span class="clubIcon material-icons-outlined"> sports_volleyball </span>
+                        <div class="clubVal"> Volleyball </div>
+                    </div>
+                    <div class="dates"> Tuesdays - 3:45 // Sra. Garcia </div>
+                    <div class="clubDescription"> (No information listed.) </div>
+                </div>
+                <div class="clubFlex-Right">
+                    <img src="/src/img/00.png" class="bannerImg">
+                </div>
+            </div>
+
+            <div class="clubItem">
+                <div class="clubFlex-Left">
+                    <div class="clubName">
+                        <span class="clubIcon material-icons-outlined"> sports_basketball </span>
+                        <div class="clubVal"> Basketball </div>
+                    </div>
+                    <div class="dates"> Wednesdays - 3:00 // Mr. Clary </div>
+                    <div class="clubDescription"> Ball out with Mr. Clary. </div>
+                </div>
+                <div class="clubFlex-Right">
+                    <img src="/src/img/00.png" class="bannerImg">
+                </div>
+            </div>
+
+            <div class="clubItem">
+                <div class="clubFlex-Left">
+                    <div class="clubName">
+                        <span class="clubIcon material-icons-outlined"> south_america </span>
+                        <div class="clubVal"> GEC LUNA </div>
+                    </div>
+                    <div class="dates"> Fridays - 12:30 // Tomas Tello</div>
+                    <div class="clubDescription"> Learn about latino culture? </div>
+                </div>
+                <div class="clubFlex-Right">
+                    <img src="/src/img/00.png" class="bannerImg">
+                </div>
+            </div>
+
+            <div class="clubItem">
+                <div class="clubFlex-Left">
+                    <div class="clubName">
+                        <span class="clubIcon material-icons-outlined"> psychology </span>
+                        <div class="clubVal"> Key Club </div>
+                    </div>
+                    <div class="dates"> Fridays - 12:30 // Mrs. Camaj </div>
+                    <div class="clubDescription"> Helps you get community service hours and throws parties. (Reccommended for classes year 2025 and after) </div>
+                </div>
+                <div class="clubFlex-Right">
+                    <img src="/src/img/00.png" class="bannerImg">
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
