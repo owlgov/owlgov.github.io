@@ -20,3 +20,9 @@
 .memberSub {
     color: var(--accent);
 }
+
+#infoContainer {
+    padding: 12px;
+    overflow-y: auto;
+    height: 580px;
+}

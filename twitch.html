@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Home | GEC Gov </title>
+    <title> Home | Owl Web </title>
     <link rel="shortcut icon" href="/src/img/owl.png" type="image/x-icon">
     <link rel="stylesheet" href="/src/css/main.css">
 
@@ -15,9 +15,11 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
 
     <script src="/src/js/index.js" defer></script>
+    <script src="/src/js/twitch.js" defer></script>
     <script src="/src/data/data.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js" integrity="sha512-ElRFoEQdI5Ht6kZvyzXhYG9NqjtkmlkfYk0wr6wHxU9JEHakS7UJZNeml5ALk+8IKlU6jDgMabC3vkumRokgJA==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
     <script src="/src/data/index.sql" defer></script>
+
 </head>
 
 <body>
@@ -39,15 +41,15 @@
     <div id="nav-desc">
         <div class="desc">
             <div class="desc-title"> 0.1 - Home </div>
-            <div class="desc-text"> Main homepage for the GEC Student Government. Go Owls!</div>
+            <div class="desc-text"> Main homepage for Student Government. Go Owls!</div>
         </div>
     </div>
 
     <nav id="gec-nav">
-        <a class="gec-navItem" onmouseover='changeDesc(` 0.1 - Home`, "Main homepage for the GEC Student Government. Go Owls!")' href="/index.html">
+        <div class="gec-navItem" onmouseover='changeDesc(` 0.1 - Home`, "Main homepage for Student Government. Go Owls!")' onclick="toggleStuff()">
             <div class="navItem-icon material-icons"> home </div>
             <div class="navItem-title"> Home </div>
-        </a>
+        </div>
 
         <a class="gec-navItem" onmouseover='changeDesc("0.2 - About Us", "Who we are and what we stand for.")' href="/about-us.html">
             <div class="navItem-icon material-icons-outlined"> info </div>
@@ -64,7 +66,7 @@
             <div class="navItem-title"> Polls </div>
         </a>
 
-        <a class="gec-navItem" onmouseover='changeDesc("0.5 - Newsletter", "Reading... ugh.")' onclick="toggleStuff()">
+        <a class="gec-navItem" onmouseover='changeDesc("0.5 - Newsletter", "Reading... ugh.")' href="/newsletter.html">
             <div class="navItem-icon material-icons-outlined"> list_alt </div>
             <div class="navItem-title"> Newsletter/Events </div>
         </a>
@@ -81,13 +83,56 @@
 
     <div id="mainContent">
         <div id="titleHolder">
-            <div class="title"> Newsletter and Events </div>
-            <div class="title-subtitle"> Read all about it..or something. </div>
+            <div class="title">
+                <div class="live-tag">
+                    <div class="live-icon material-icons"> radio_button_checked </div> LIVE </div> Robotics Event </div>
+            <div class="title-subtitle"> Watch our GEC Robotics Team in their competition! (Brought to you by Nolan) </div>
         </div>
 
+        <div id="twitch-embed"></div>
 
         <div id="content-vtS"> </div>
-
-        <div id="infoContainer"> Hmmm... </div>
     </div>
 </body>
+
+<style>
+    .live-tag {
+        font-size: 21px;
+        display: flex;
+        align-items: center;
+        padding: 3px 8px;
+        border-radius: 8px;
+        background: #e22020;
+        height: 45px;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+    }
+    
+    #twitch-embed {
+        margin: 8px;
+    }
+    
+    .live-icon.material-icons {
+        margin: 8px;
+    }
+    
+    iframe {
+        width: 95vw;
+        height: 75vh;
+        padding: 12px;
+        border: 2px solid white;
+        border-radius: 8px;
+        background: #fff2;
+    }
+    
+    #navButton {
+        opacity: 0;
+    }
+</style>
+<script src="https://embed.twitch.tv/embed/v1.js"></script>
+
+<script type="text/javascript">
+</script>
+
+</html>
